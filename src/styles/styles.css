@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+ background-image: url("../img/business-people-are-brainstorming\ 1.png");
+ background-repeat: no-repeat;
+ background-size: cover;
+ min-height: 100vh;
+ background-color: #232323;
+
+ 
+}
+
+ main {
+    display: flex;
+    justify-content: center;
+    margin-top: 300px;
+ }
+
+.content-cards {
+    display: flex;
+    gap: 120px;
+    font-size: 30px;
+    font-weight: 700;
+ }
+
+ .color-green {
+    background-color: #32B51A;
+    padding: 40px;
+    border-radius: 8px;
+    width: 270px;
+ }
+
+ .color-violet {
+    background-color: #343C84;
+    padding: 40px;
+    border-radius: 8px;
+   
+  
+ }
+
+ .color-blue {
+    background-color: #7878D3;
+    padding: 40px;
+    border-radius: 8px;
+    width: 270px;
+  
+ }
+
+ .color-green, .color-violet, .color-blue h3 {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    
+ }
+
+ .card-todo, .card-progress, .card-done {
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    
+ }
+
+ .content-cards h5 { 
+    font-size: 20px;
+    padding: 5px;
+    margin-left: 10px;
+ }
+
+
+header {
+    width: 100%;
+    height: 108px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #acaccc;
+    
+}
+
+
+
+header .main-header  {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    
+}
+
+ul li {
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+ 
+}
+
+header a {
+    text-decoration: none;
+}
+
+header input {
+    width: 200px;
+    height: 32px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: #343c84;
+    padding-bottom: 4px;
+    color: #fff;
+   position: absolute;
+    top: -5px;
+    
+   
+}
+
+header input::placeholder {
+    color: #fff;
+    padding-left: 20px;
+   
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-container::before {
+    content: "\1F50D"; 
+    position: absolute;
+    left: 170px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px; 
+    color: #999; 
+}
+
+.avatar-header {
+    position: absolute;
+    margin-left: 930px;
+    margin-bottom: px;
+}
+
+.sub-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 59px;
+    background-color: #343c84;
+}
+
+.sub-nav {
+    display: flex;
+    gap: 16px;
+}
+
+.sub-nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.sub-nav button {
+    height: 35px;
+}
+
+.sub-nav .btn-template {
+    width: 100px;
+    background-color: #5aad65;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+
+}
+
+.sub-nav .btn-back {
+    width: 163px;
+    background-color: #5aad65;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+}
+
+.sub-nav .btn-gray {
+    width: 146px;
+    background-color: #AFAAAA;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+
+
+footer {
+    width: 100%;
+    height: 144px;
+    background-color: #232323;
+    position: absolute;
+    margin-top: 335px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  
+}
+
+
+p {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
