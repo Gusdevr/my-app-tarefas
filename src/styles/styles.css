@@ -291,6 +291,8 @@ p {
 }
 
 
+/* styles de minhas tarefas */
+
 
 .tasks-container {
     display: flex;
@@ -305,11 +307,26 @@ p {
     padding: 10px;
     width: 200px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #7878D3;
+}
+
+.title-tasks {
+    color: #fff;
+    position: absolute;
+    bottom: 60%;
+    background-color: #232323c7;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .task-card h3 {
     margin-bottom: 10px;
     font-size: 1.2em;
+   
+   
 }
 
 .task-card p {
@@ -320,5 +337,7 @@ p {
 .task-card .status {
     font-weight: bold;
     margin-top: 10px;
+    color: #36e018;
+    
 }
 
