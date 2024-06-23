@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/styles.css">
+    <title>Minhas Tarefas</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html"><img class="logo-header" width="150px" src="./src/img/logo.png" alt=""></a>
+        <div class="main-header">
+            <nav>
+                <ul>
+                    <a href="./index.html"><li>Criar nova tarefa</li></a>
+                    <a href="./minhastarefas.html"><li>Minhas tarefas</li></a>
+                    <div class="search-container">
+                        <input placeholder="Procurar tarefa" type="text">
+                    </div>
+                </ul>
+            </nav>
+        </div>
+        <img class="avatar-header" width="40px" src="./src/icons/uservatar.png" alt="">
+    </header>
+
+    <main>
+        <h2>Minhas Tarefas</h2>
+        <div id="tasksContainer" class="tasks-container">
+            <!-- Tarefas serão renderizadas aqui -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container-copy">
+            <p>Gusdev my App&copy;</p>
+        </div>
+    </footer>
+
+
+    <script>
+
+        // script de minhas tarefas
+
+
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const response = await fetch('http://localhost:5000/tarefas');
+        if (!response.ok) {
+            throw new Error('Erro ao buscar tarefas.');
+        }
+
+        const tarefas = await response.json();
+        const tasksContainer = document.getElementById('tasksContainer');
+
+        tarefas.forEach(tarefa => {
+            const taskCard = document.createElement('div');
+            taskCard.classList.add('task-card');
+
+            taskCard.innerHTML = `
+                <h3>${tarefa.titulo}</h3>
+                <p>${tarefa.descricao}</p>
+                <p>Data de Vencimento: ${new Date(tarefa.data_vencimento).toLocaleDateString()}</p>
+                <p>Prioridade: ${tarefa.prioridade}</p>
+                <p class="status">Status: ${tarefa.status}</p>
+            `;
+
+            tasksContainer.appendChild(taskCard);
+        });
+    } catch (error) {
+        console.error('Erro:', error);
+        alert('Erro ao buscar tarefas.');
+    }
+});
+
+
+    </script>
+</body>
+</html>
